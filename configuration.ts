@@ -86,6 +86,17 @@ export class Configuration {
         else {
             this.credentials = {};
         }
+
+        // init default auth_token credential
+        if (!this.credentials['auth_token']) {
+            this.credentials['auth_token'] = () => {
+                if (this.apiKeys === null || this.apiKeys === undefined) {
+                    return undefined;
+                } else {
+                    return this.apiKeys['auth_token'] || this.apiKeys['Authorization'];
+                }
+            };
+        }
     }
 
     /**
