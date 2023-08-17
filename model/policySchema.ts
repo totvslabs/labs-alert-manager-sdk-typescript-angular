@@ -15,7 +15,7 @@ export interface PolicySchema {
     /**
      * List of channel notification
      */
-    channels: object;
+    channels: Array<string>;
     /**
      * Policy Client source
      */
