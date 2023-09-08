@@ -54,21 +54,9 @@ export interface PolicySchema {
      */
     id: string;
     /**
-     * Policy labels
-     */
-    labels: object;
-    /**
      * Policy name
      */
     name: string;
-    /**
-     * Policy severity
-     */
-    severity: string;
-    /**
-     * Policy type
-     */
-    type: string;
     updated_at?: string;
 }
 
